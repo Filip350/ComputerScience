@@ -6,7 +6,21 @@
     return;
   }
   const $ = (id) => document.getElementById(id);
-  const state = {category:"algorithms",search:""};
+  const state = {category:"algorithms",search:"",group:"all"};
+  const algorithmTopics = data.topics.filter(t => t.category === "algorithms");
+  const algorithmGroups = [...new Set(algorithmTopics.map(t => t.group))];
+  const algorithmGroup = $("algorithmGroup");
+  for (const group of algorithmGroups) {
+    const count = algorithmTopics.filter(t => t.group === group).length;
+    const option = elOption(group, `${group.charAt(0)}${group.slice(1).toLocaleLowerCase("pl")} (${count})`);
+    algorithmGroup.append(option);
+  }
+  function elOption(value, label) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = label;
+    return option;
+  }
   const total = data.topics.length;
   const theory = data.topics.filter(t => t.theory).length;
   const practice = data.topics.filter(t => t.practice).length;
@@ -19,7 +33,7 @@
   const el = (tag,cls,txt) => {const node=document.createElement(tag);if(cls)node.className=cls;if(txt!==undefined)node.textContent=txt;return node;};
   const countFor = (id) => data.topics.filter(t=>t.category===id).length;
   function selectCategory(id) {
-    state.category=id;state.search="";$("searchInput").value="";
+    state.category=id;state.search="";state.group="all";algorithmGroup.value="all";$("searchInput").value="";
     render();$("topics").scrollIntoView({behavior:"smooth",block:"start"});
   }
   function renderNav() {
@@ -63,6 +77,11 @@
         return [t.title,t.subtitle,t.group,t.description,c?c.name:""].join(" ").toLocaleLowerCase("pl").includes(search);
       });
     }else{topics=topics.filter(t=>t.category===state.category);}
+    if(state.category==="algorithms" && state.group!=="all") {
+      topics=topics.filter(t=>t.category==="algorithms" && t.group===state.group);
+    }
+    $("algorithmFilters").hidden=state.category!=="algorithms";
+    $("algorithmGroupMeta").textContent=topics.length+" z "+algorithmTopics.length+" algorytmów";
     $("categoryLabel").textContent=search?"WYNIKI WYSZUKIWANIA":"DZIEDZINA / "+(category?category.name.toLocaleUpperCase("pl"):"");
     $("categoryHeading").textContent=search?"Szukasz: "+state.search:category?category.name:"Mapa wiedzy";
     $("categoryDescription").textContent=search?"Wyniki ze wszystkich działów mapy.":category?category.desc:"";
@@ -77,6 +96,7 @@
   }
   function render(){renderNav();renderCategories();renderTopics();}
   $("searchInput").addEventListener("input",(event)=>{state.search=event.target.value;render();});
+  algorithmGroup.addEventListener("change",(event)=>{state.group=event.target.value;renderTopics();});
   document.addEventListener("keydown",(event)=>{
     if(event.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)&&!event.ctrlKey&&!event.metaKey){
       event.preventDefault();$("searchInput").focus();

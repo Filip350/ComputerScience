@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#0d1117">
   <meta name="description" content="Interaktywna mapa nauki informatyki — algorytmy, struktury danych i powiązane notatki.">
   <title>Computer Science · Mapa wiedzy</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=filters-1">
   <script defer src="./data/topics.js?v=e79b591"></script>
-  <script defer src="./app.js?v=e79b591"></script>
+  <script defer src="./app.js?v=filters-1"></script>
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -52,6 +52,16 @@
         <section id="topics" class="topics-section" aria-labelledby="topicsTitle">
           <div class="section-top section-top-topics"><div><p class="section-kicker">02 / MAPA TEMATÓW</p><h2 id="topicsTitle">Zagadnienia<span class="lime">.</span></h2></div><label class="search-field"><span aria-hidden="true">⌕</span><span class="visually-hidden">Wyszukaj zagadnienie</span><input id="searchInput" type="search" placeholder="Szukaj na mapie..." autocomplete="off"><kbd>/</kbd></label></div>
           <div class="selection-summary"><div><span class="selection-label" id="categoryLabel">ALGORYTMY</span><h3 id="categoryHeading">Algorytmy</h3><p id="categoryDescription"></p></div><span class="pill-counter" id="topicCount"></span></div>
+          <div class="topic-filters" id="algorithmFilters" aria-label="Filtrowanie algorytmów">
+            <label class="filter-label" for="algorithmGroup">RODZAJ ALGORYTMU</label>
+            <div class="filter-select-wrap">
+              <select id="algorithmGroup" class="filter-select">
+                <option value="all">Wszystkie grupy</option>
+              </select>
+              <span class="filter-chevron" aria-hidden="true">⌄</span>
+            </div>
+            <span class="filter-total" id="algorithmGroupMeta">Wszystkie algorytmy</span>
+          </div>
           <div class="topics-grid" id="topicsGrid" aria-live="polite"></div>
         </section>
         <section class="legend-section" aria-label="Legenda postępów"><div class="legend-head"><span class="section-kicker">JAK CZYTAĆ STATUSY</span><p>Znajomość teorii nie oznacza jeszcze umiejętności implementacji.</p></div><div class="legend-items"><span><i class="legend-dot theory-dot"></i> Teoria poznana</span><span><i class="legend-dot practice-dot"></i> Praktyka zweryfikowana</span><span><i class="legend-dot todo-dot"></i> Do zrobienia</span></div></section>
