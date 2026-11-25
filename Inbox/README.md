@@ -1,9 +1,11 @@
 # Inbox — strefa robocza asystenta
 
-Tu trafiają **robocze** materiały z rozmów: surowe notatki, propozycje tematów, szkice roadmapy, pomysły na projekty, pytania do sprawdzenia i propozycje aktualizacji.
+To miejsce na **roboczą wiedzę** wynikającą z rozmów: wyjaśnienia algorytmów, nieuporządkowane wnioski, propozycje notatek, mapy nauki i szkice case studies.
 
-Asystent może tworzyć i zmieniać pliki w tym katalogu bez osobnego zatwierdzania każdej notatki. Zawartość nie jest automatycznie uznawana za poprawną ani gotową do publikacji w `Notes/`.
+Nie zapisujemy tu pełnych projektów ani kodu źródłowego aplikacji. W przypadku projektów dokumentujemy problem, koncepcję rozwiązania, decyzje techniczne, błędy, wyniki i lekcje.
 
-**Przepływ:** rozmowa → `Inbox/` → przegląd przez właściciela → wyraźne zatwierdzenie → `Notes/`.
+Asystent może samodzielnie tworzyć i porządkować zawartość `Inbox/`. Nic nie jest automatycznie zatwierdzoną notatką właściciela.
 
-Pierwszy potwierdzony temat do opracowania: **wyszukiwanie binarne (Binary Search)** — zrozumiana idea odrzucania połowy posortowanego zakresu; implementacja w Pythonie nie została jeszcze sprawdzona.
+**Przepływ:** rozmowa → `Inbox/` → przegląd właściciela → wyraźne zatwierdzenie → `Notes/`.
+
+Pierwszy temat do opracowania: **Binary Search (wyszukiwanie binarne)** — zasada zrozumiana; implementacja w Pythonie jeszcze niezweryfikowana.
