@@ -1,27 +1,38 @@
 # Zasady współpracy — Computer Science
 
-## 1. Podział odpowiedzialności
+## 1. Cel repozytorium
 
-- `Inbox/` jest roboczą przestrzenią asystenta. Może tam samodzielnie tworzyć, modyfikować i porządkować materiały związane z nauką, zachowując historię zmian w Git.
-- `Notes/` jest przestrzenią właściciela. Asystent **nie tworzy, nie zmienia, nie usuwa ani nie przenosi** tam plików bez **wyraźnej prośby albo akceptacji konkretnej zmiany**.
-- Pliki konfiguracyjne i zasady w katalogu głównym zmieniamy po wspólnym uzgodnieniu.
+To **baza wiedzy**, a nie repozytorium kodu projektów. Przechowujemy tutaj:
+- notatki i wyjaśnienia zagadnień informatycznych;
+- mapy wiedzy i ścieżki nauki;
+- wnioski, porównania podejść i przetestowane rozwiązania;
+- **case studies** projektów: problem, podjęte decyzje, architektura na poziomie koncepcji, napotkane trudności, wyniki, lekcje i możliwe ulepszenia.
 
-## 2. Przepływ informacji
+**Nie trzymamy tutaj pełnych projektów, ich kodu źródłowego ani artefaktów wdrożeniowych.** Projekty mogą mieć osobne repozytoria; tutaj zapisujemy wiedzę uzyskaną podczas ich realizacji.
 
-1. Podczas rozmowy asystent może odkładać szkice, rozpoznane zagadnienia, pytania, pomysły na projekty i propozycje notatek do `Inbox/`.
-2. Materiały robocze muszą być jasno oznaczone jako szkic / do sprawdzenia, jeśli nie zostały zweryfikowane.
-3. Właściciel przegląda propozycje i decyduje, co oraz w jakiej formie trafi do `Notes/`.
-4. Dopiero po tej decyzji asystent może przygotować wskazaną zmianę w `Notes/`; preferowany jest pull request do przeglądu, gdy jest to możliwe.
-5. Właściciel może dowolnie edytować wszystkie pliki, także `Inbox/`.
+## 2. Podział odpowiedzialności
 
-## 3. Standard notatek
+- `Inbox/` jest roboczą przestrzenią asystenta. Może tu samodzielnie tworzyć, modyfikować i porządkować szkice związane z nauką.
+- `Notes/` jest przestrzenią właściciela. Asystent **nie tworzy, nie zmienia, nie usuwa ani nie przenosi** tam plików bez **wyraźnej prośby lub akceptacji konkretnej zmiany**.
+- Pliki konfiguracyjne i zasady w katalogu głównym zmieniamy po uzgodnieniu.
 
-- Format: Markdown (zgodny z GitHub i Obsidian); diagramy: Mermaid.
-- Oddzielamy **poznane w teorii**, **zaimplementowane** i **zastosowane w projekcie**.
-- Nie przypisujemy ukończenia implementacji bez potwierdzenia.
-- Podajemy źródła przy zewnętrznych faktach; zaznaczamy wątpliwości.
-- Asystent nie wykonuje automatycznej synchronizacji ani pracy w tle: aktualizacje następują podczas uruchomionych interakcji.
+## 3. Przepływ informacji
 
-## 4. Bezpieczeństwo
+1. Podczas rozmów asystent zapisuje robocze wnioski, szkice notatek, map i case studies do `Inbox/`, kiedy pracujemy nad repozytorium.
+2. Treści niezweryfikowane są oznaczane jako szkic / do sprawdzenia.
+3. Właściciel wybiera materiały, poprawia ich strukturę i decyduje, co ma trafić do `Notes/`.
+4. Dopiero po wyraźnej decyzji asystent może wykonać wskazaną zmianę w `Notes/`; w razie potrzeby przez pull request do przeglądu.
+5. Właściciel może edytować wszystkie pliki, w tym `Inbox/`.
 
-Repozytorium jest publiczne. Nie zapisujemy danych wrażliwych, sekretów, tokenów i materiałów prywatnych.
+## 4. Standard wiedzy
+
+- Markdown kompatybilny z GitHubem i Obsidianem; mapy i schematy w Mermaid.
+- Rozdzielamy: **rozumiem teorię**, **potrafię zaimplementować**, **potrafię zastosować**.
+- Case study dokumentuje przede wszystkim **czego nauczył projekt**, nie jego repozytorium lub kompletną implementację.
+- Nie oznaczamy umiejętności jako zaliczonych bez dowodów z rozmowy lub wykonanej pracy.
+- Zewnętrzne informacje otrzymują źródła, a niepewność jest oznaczona.
+- Zapisy do GitHub wymagają interakcji z asystentem; brak gwarancji samoczynnej synchronizacji w tle.
+
+## 5. Bezpieczeństwo
+
+Repozytorium jest publiczne. Nie publikujemy sekretów, tokenów, danych wrażliwych ani poufnych fragmentów projektów. Nawet w case studies zachowujemy tylko informacje przeznaczone do udostępnienia.
