@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="description" content="Projekty Computer Science — roadmapa nauki budowy własnego systemu operacyjnego x86 od kodu maszynowego, przez BIOS i VGA, po pulpit z oknami.">
+  <title>Projekty · Computer Science</title>
+  <link rel="stylesheet" href="./style.css?v=projects-1">
+  <link rel="stylesheet" href="./projects.css?v=1">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Computer Science — strona główna">
+        <span class="brand-symbol">&lt;/&gt;</span><span class="brand-text">COMPUTER<span>SCIENCE</span></span>
+      </a>
+      <div class="header-right">
+        <span class="live-dot" aria-hidden="true"></span><span class="header-tag">PERSONAL KNOWLEDGE MAP</span>
+        <a class="header-link header-page-link" href="./index.html">Mapa wiedzy</a>
+        <a class="header-link header-page-link current-page" href="./projects.html" aria-current="page">Projekty</a>
+        <a class="header-link header-repo" href="https://github.com/Filip350/ComputerScience" target="_blank" rel="noopener noreferrer">Repozytorium <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="projects-hero" aria-labelledby="projectsTitle">
+        <p class="eyebrow"><span class="eyebrow-line"></span> COMPUTER SCIENCE / PROJEKTY</p>
+        <h1 id="projectsTitle">Ucz się, <em>budując</em><br>od fundamentów<span class="hero-period">.</span></h1>
+        <p class="projects-lead">Tutaj zbieramy projekty, które prowadzą od teorii do samodzielnej implementacji. Pierwszym z nich jest system operacyjny budowany na poziomie instrukcji procesora — bez gotowego kernela, frameworku graficznego i sterowników.</p>
+        <div class="page-meta"><span class="status-label">1 PROJEKT W PLANIE</span><span>Stan: konspekt · bez zaliczonych etapów</span></div>
+        <div class="hero-actions"><a class="primary-action" href="#roadmap">Zobacz plan nauki <span aria-hidden="true">↘</span></a><a class="text-action" href="./index.html">Wróć do mapy wiedzy <span aria-hidden="true">→</span></a></div>
+      </section>
+
+      <section class="project-section" aria-labelledby="catalogTitle">
+        <div class="projects-heading"><div><p class="section-kicker">01 / KATALOG</p><h2 id="catalogTitle">Projekty<span class="lime">.</span></h2><p>Każdy projekt ma własny cel, etapy, dowody nauki i robocze notatki na GitHubie.</p></div></div>
+        <article class="project-card" id="bare-metal" aria-labelledby="projectTitle">
+          <div>
+            <div class="project-kicker">01 / SYSTEMY OPERACYJNE / BARE METAL</div>
+            <h3 id="projectTitle">Własny system operacyjny x86</h3>
+            <p>Od pierwszej instrukcji asemblera, przez bootloader przejmujący sterowanie po BIOS-ie, aż do własnego jądra systemu, sterowników VGA i PS/2 oraz pulpitu inspirowanego Windows 95. Wszystko po to, by naprawdę rozumieć każdą warstwę.</p>
+            <div class="project-card-actions"><a class="primary-action" href="#roadmap">Roadmapa <span aria-hidden="true">↘</span></a><a class="text-action" href="https://github.com/Filip350/ComputerScience/blob/main/Inbox/projects/bare-metal-os-x86.md" target="_blank" rel="noopener noreferrer">Szkic w Inbox ↗</a></div>
+          </div>
+          <aside class="project-card-side" aria-label="Parametry projektu">
+            <div class="project-fact"><small>START</small><strong>x86 · assembler · BIOS</strong></div>
+            <div class="project-fact"><small>PLATFORMA</small><strong>Mac M1 + QEMU → fizyczny PC</strong></div>
+            <div class="project-fact"><small>WYJŚCIE / WEJŚCIE</small><strong>Monitor VGA · klawiatura PS/2</strong></div>
+            <div class="project-fact"><small>STATUS</small><strong>W planie · 0 / 14 etapów</strong></div>
+          </aside>
+        </article>
+      </section>
+
+      <section class="project-section" aria-labelledby="bootTitle">
+        <div class="projects-heading"><div><p class="section-kicker">02 / OD WŁĄCZENIA DO OBRAZU</p><h2 id="bootTitle">Jak daleko schodzimy<span class="lime">?</span></h2><p>Najpierw istniejący BIOS uruchamia nasz kod. Później sami przejmujemy kolejne funkcje sprzętowe — bez systemu operacyjnego pod spodem.</p></div></div>
+        <div class="flow" aria-label="Łańcuch od procesora do pulpitu">
+          <div class="flow-step"><small>01</small><strong>Instrukcje CPU</strong></div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><small>02</small><strong>BIOS → nasz bootloader</strong></div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><small>03</small><strong>Rejestry VGA, pierwszy piksel</strong></div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><small>04</small><strong>Kernel i sterowniki</strong></div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><small>05</small><strong>Okna i aplikacje</strong></div>
+        </div>
+      </section>
+
+      <section class="project-section" id="roadmap" aria-labelledby="roadmapTitle">
+        <div class="projects-heading"><div><p class="section-kicker">03 / ŚCIEŻKA NAUKI</p><h2 id="roadmapTitle">Roadmapa od zera<span class="lime">.</span></h2><p>14 etapów; kolejność szczegółowych zadań możemy dostosować w trakcie nauki. Każdy ma mierzalny rezultat — wszystkie są jeszcze do zrobienia.</p></div><span class="pill-counter">0 / 14 ukończonych</span></div>
+        <div class="roadmap-grid">
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 00</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Procesor i kod maszynowy</h3><p>Bity, system binarny i szesnastkowy, rejestry, flagi, adresy pamięci, cykl wykonywania instrukcji oraz podstawy asemblera.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Wyjaśniasz, co instrukcja zmieniła w rejestrze i pamięci.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 01</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Narzędzia i pierwszy program x86</h3><p>NASM, bajty pliku wynikowego, hexdump, QEMU, debugger oraz wykonywanie pojedynczych instrukcji.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Uruchamiasz własne bajty instrukcji i obserwujesz stan CPU.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 02</span><span class="milestone-state">○ DO NAUKI</span></div><h3>BIOS i własny bootloader</h3><p>Legacy BIOS, real mode, adres 0x7C00, 512-bajtowy sektor rozruchowy, sygnatura 0x55AA, segmenty i stos.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> BIOS przekazuje sterowanie Twojemu własnemu kodowi.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 03</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Pierwsza litera na monitorze</h3><p>Klasyczny tryb tekstowy VGA, pamięć 0xB8000, kody znaków i kolory. Na początek tryb ustawiony przez BIOS.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Sam zapisujesz literę X do pamięci ekranu.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 04</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Rejestry VGA i piksele</h3><p>Porty I/O, rejestry kontrolera VGA, tryby graficzne, piksele, kolory, linie i prostokąty bez bibliotek graficznych.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Samodzielnie ustawiasz tryb VGA i wyświetlasz pierwszy piksel.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 05</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Własny sterownik klawiatury</h3><p>PS/2, kontroler i8042, porty 0x60 i 0x64, scancodes, polling oraz mapowanie przycisków.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Odczytujesz klawisze bez systemowego sterownika.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 06</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Przerwania i zegar</h3><p>Przerwania sprzętowe, PIC, PIT, tablice wektorów, IRQ i obsługa timera oraz klawiatury.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Reagujesz na klawisze i tyknięcia zegara przez przerwania.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 07</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Większy loader i protected mode</h3><p>Odczyt kolejnych sektorów, A20, GDT, stos i przejście z real mode do 32-bitowego protected mode.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Własny loader uruchamia większy kernel w trybie chronionym.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 08</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Kernel w C bez systemu</h3><p>Freestanding C, linker script, ABI, komunikacja C z asemblerem, podstawowe wyjście tekstowe oraz obsługa wyjątków.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Twoja funkcja w C działa bez Linuxa i bez gotowego printf.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 09</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Zarządzanie pamięcią</h3><p>Mapa pamięci, stos i sterta, przydzielanie stron, paging, pamięć wirtualna i błędy dostępu.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Kernel sam przydziela pamięć i wykrywa błędny dostęp.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 10</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Dysk, pliki i programy</h3><p>Sektory dysku, urządzenia blokowe, prosty system plików i ładowanie danych lub programów.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Odczytujesz i zapisujesz plik przez własny kod.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 11</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Mysz i własny system okien</h3><p>PS/2 mouse, kursor, fonty bitmapowe, rysowanie 2D, nakładanie okien, obsługa kliknięć.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Rysujesz pulpit i przesuwasz dwa okna myszą.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 12</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Zadania i aplikacje</h3><p>Przełączanie kontekstu, prosty scheduler, zdarzenia, API aplikacji i pasek zadań.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Uruchamiasz mini-notatnik i kalkulator we własnym środowisku.</div></article>
+          <article class="milestone"><div class="milestone-top"><span class="milestone-index">ETAP 13</span><span class="milestone-state">○ DO NAUKI</span></div><h3>Testy i dokumentacja wiedzy</h3><p>Debugowanie, testowanie w QEMU, schemat architektury, analiza błędów i retrospekcje.</p><div class="milestone-result"><strong>Cel praktyczny:</strong> Potrafisz samodzielnie wyjaśnić architekturę oraz każdy kamień milowy.</div></article>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="milestonesTitle">
+        <div class="projects-heading"><div><p class="section-kicker">04 / WIDOCZNE REZULTATY</p><h2 id="milestonesTitle">Kamienie milowe<span class="lime">.</span></h2><p>Od „procesor wykonał moje instrukcje” aż do „sam napisałem działający pulpit”. To cele, nie deklaracje ukończenia.</p></div></div>
+        <div class="checkpoints">
+          <div class="checkpoint"><span class="marker">○</span><div><strong>M1 · Rejestr</strong><span>Pierwszy uruchomiony kod maszynowy</span></div></div>
+        <div class="checkpoint"><span class="marker">○</span><div><strong>M2 · Boot</strong><span>BIOS uruchamia nasz bootloader</span></div></div>
+        <div class="checkpoint"><span class="marker">○</span><div><strong>M3 · Znak X</strong><span>Litera pojawia się na monitorze</span></div></div>
+        <div class="checkpoint"><span class="marker">○</span><div><strong>M4 · Piksel</strong><span>Własny sterownik VGA i grafika</span></div></div>
+        <div class="checkpoint"><span class="marker">○</span><div><strong>M5 · Klawiatura</strong><span>Odczyt klawiszy PS/2</span></div></div>
+        <div class="checkpoint"><span class="marker">○</span><div><strong>M6 · Pulpit</strong><span>Okna, mysz i własne aplikacje</span></div></div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="principlesTitle">
+        <div class="projects-heading"><div><p class="section-kicker">05 / SPOSÓB PRACY</p><h2 id="principlesTitle">Zasady projektu<span class="lime">.</span></h2></div></div>
+        <div class="track-grid">
+          <div class="track-card"><span class="track-icon">⌘</span><h3>Własne mechanizmy</h3><p>Bez Circle, gotowego kernela czy GUI. Narzędzia na Macu mogą asemb­lować i emulować kod, ale nasz system nie będzie z nich korzystać.</p></div>
+          <div class="track-card"><span class="track-icon">◎</span><h3>Najpierw zrozumienie</h3><p>Wyjaśniamy instrukcje, pamięć i rejestry, zanim dodamy kolejną warstwę. Nie zaznaczamy teorii ani praktyki jako ukończonej bez dowodu.</p></div>
+          <div class="track-card"><span class="track-icon">▤</span><h3>Notatki osobno od kodu</h3><p>Ta baza wiedzy przechowuje plan i wnioski. Kompletna implementacja systemu dostanie osobne repozytorium. Szkice trafiają do Inbox; Notes zatwierdza właściciel.</p></div>
+        </div>
+      </section>
+
+      <div class="projects-footer">
+        <p>Źródła techniczne: <a href="https://wiki.osdev.org/Boot_Sequence" target="_blank" rel="noopener noreferrer">OSDev Boot Sequence ↗</a>, <a href="https://wiki.osdev.org/VGA_Text_Mode" target="_blank" rel="noopener noreferrer">VGA Text Mode ↗</a> i <a href="https://www.qemu.org/docs/master/system/qemu-manpage.html" target="_blank" rel="noopener noreferrer">QEMU ↗</a>. Stara ścieżka BIOS/VGA to świadomy wybór edukacyjny — nie uniwersalny sposób uruchamiania nowego sprzętu UEFI.</p>
+      </div>
+    </main>
+    <footer class="site-footer"><span>COMPUTER SCIENCE / PROJEKTY</span><span>Plan i wiedza w <a href="https://github.com/Filip350/ComputerScience" target="_blank" rel="noopener noreferrer">GitHub</a> · implementacja osobno</span><span>2026</span></footer>
+  </div>
+</body>
+</html>
