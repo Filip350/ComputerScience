@@ -10,3 +10,20 @@
 .filter-chevron{position:absolute;right:14px;top:50%;transform:translateY(-55%);pointer-events:none;color:var(--lime);font-size:21px;line-height:1}
 .filter-total{margin-left:auto;font-size:11px;color:#9dacac;white-space:nowrap}
 @media(max-width:510px){.topic-filters{align-items:stretch;gap:10px}.filter-label{width:100%}.filter-select-wrap{flex:1 1 100%;max-width:none}.filter-total{margin:0;font-size:10px}}
+
+/* Nawigacja między mapą wiedzy i nową zakładką Projekty. */
+.header-right{gap:8px}
+.header-right .header-link{margin-left:0;white-space:nowrap}
+.header-right .header-page-link[aria-current="page"]{border-color:#658c59;background:#1b2d23;color:var(--lime)}
+@media(max-width:650px){
+  .header-right .header-repo{display:none}
+  .header-right .header-link{padding:8px 10px}
+}
+@media(max-width:510px){
+  .site-header{gap:7px}
+  .brand{gap:8px}
+  .brand-symbol{font-size:17px;padding:6px 9px 7px 7px}
+  .brand-text{font-size:9px;letter-spacing:.5px}
+  .header-right{gap:5px}
+  .header-right .header-link{font-size:10px;padding:7px 8px}
+}
