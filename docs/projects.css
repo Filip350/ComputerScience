@@ -1,0 +1,68 @@
+/* Zakładka Projekty — rozszerzenie stylu bazowego, bez frameworków. */
+.projects-hero{position:relative;padding:67px 0 47px;border-bottom:1px solid var(--stroke)}
+.projects-hero .eyebrow{margin:0}
+.projects-hero h1{max-width:970px;margin:21px 0 23px;font-size:clamp(38px,5.2vw,70px)}
+.projects-lead{max-width:780px;color:#b3c1be;font-size:16px;line-height:1.85;margin:0}
+.projects-hero .hero-actions{margin-top:31px}
+.page-meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:23px;font-size:11px;color:#92a49f}
+.status-label{border:1px solid #4b5c46;border-radius:5px;color:#d2f5a7;background:#1b2920;padding:5px 9px;font-weight:800;letter-spacing:.8px}
+.project-section{padding:55px 0;border-bottom:1px solid var(--stroke)}
+.projects-heading{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:24px}
+.projects-heading h2{margin:0 0 8px}
+.projects-heading p:not(.section-kicker){margin:0;color:#92a7a6;font-size:13px;max-width:640px;line-height:1.75}
+.project-card{background:linear-gradient(140deg,#172720,#121b22 65%);border:1px solid #385444;border-radius:10px;padding:30px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:35px}
+.project-card h3{font-size:26px;letter-spacing:-.9px;line-height:1.2;margin:0 0 14px}
+.project-card p{font-size:13px;line-height:1.85;color:#b3c3bb;margin:0 0 21px}
+.project-kicker{font-size:11px;color:var(--lime);letter-spacing:2px;font-weight:800;margin-bottom:14px}
+.project-card-side{border-left:1px solid #3a4d44;padding-left:27px;display:flex;flex-direction:column;gap:17px;justify-content:center}
+.project-fact small{font-size:10px;letter-spacing:1px;color:#82968d;display:block;margin-bottom:5px}
+.project-fact strong{display:block;font-size:13px;line-height:1.5}
+.project-card-actions{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.project-card-actions .primary-action{padding:11px 17px;gap:12px}
+.project-card-actions .text-action{font-size:12px}
+.flow{display:flex;align-items:stretch;gap:7px;flex-wrap:wrap;margin-top:22px}
+.flow-step{flex:1 1 130px;background:#172129;border:1px solid #314247;border-radius:7px;padding:16px 14px;min-width:130px}
+.flow-step small{display:block;color:#6c898a;font-size:10px;font-weight:800;letter-spacing:1px;margin-bottom:7px}
+.flow-step strong{font-size:13px;line-height:1.45;display:block}
+.flow-arrow{align-self:center;color:var(--lime);font-size:19px;font-weight:800}
+.roadmap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:26px}
+.milestone{border:1px solid #2b3940;background:#131d23;border-radius:9px;padding:23px;min-width:0}
+.milestone-top{display:flex;gap:16px;justify-content:space-between;align-items:center;margin-bottom:13px}
+.milestone-index{font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--lime);letter-spacing:1.5px}
+.milestone-state{font-size:10px;font-weight:700;color:#8a9b9e;background:#202e35;border:1px solid #36464d;padding:4px 9px;border-radius:99px;white-space:nowrap}
+.milestone h3{margin:0 0 9px;font-size:18px;letter-spacing:-.35px}
+.milestone p{margin:0 0 15px;font-size:12px;line-height:1.75;color:#9eb1b0}
+.milestone-result{font-size:11px;color:#d0e4d7;border-top:1px solid #2d3e43;padding-top:13px;line-height:1.7}
+.milestone-result strong{color:var(--lime)}
+.track-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:24px}
+.track-card{padding:23px;background:#151f25;border:1px solid #304149;border-radius:8px}
+.track-card h3{font-size:15px;margin:0 0 10px}
+.track-card p{font-size:12px;line-height:1.7;margin:0;color:#a2b4b3}
+.track-card .track-icon{font-size:23px;color:var(--lime);display:block;margin-bottom:15px}
+.checkpoints{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:24px}
+.checkpoint{display:flex;align-items:flex-start;gap:12px;border:1px solid #31413c;border-radius:7px;background:#14211b;padding:16px}
+.checkpoint .marker{color:var(--lime);font-weight:700;font-size:16px;line-height:1.1}
+.checkpoint strong{font-size:12px;display:block;margin-bottom:3px}
+.checkpoint span{font-size:11px;color:#9bb1a6}
+.projects-footer{margin:24px 0 58px;display:flex;gap:17px;align-items:center;flex-wrap:wrap}
+.projects-footer p{font-size:12px;color:#9caaa7;line-height:1.7;margin:0}
+.projects-footer a{color:var(--lime);font-size:12px;font-weight:700;text-decoration:underline}
+.header-link.current-page{border-color:#658c59;background:#1b2d23;color:var(--lime)}
+@media(max-width:960px){
+ .project-card{grid-template-columns:1fr;gap:18px}
+ .project-card-side{border-left:0;border-top:1px solid #3a4d44;padding:19px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+ .track-grid,.checkpoints{grid-template-columns:repeat(2,1fr)}
+ .flow-arrow{display:none}
+}
+@media(max-width:750px){
+ .projects-hero{padding:52px 0 37px}
+ .projects-hero h1{letter-spacing:-1.5px}
+ .projects-lead{font-size:14px}
+ .project-section{padding:40px 0}
+ .roadmap-grid{grid-template-columns:1fr}
+ .projects-heading{display:block}
+ .project-card{padding:23px}
+ .project-card-side{grid-template-columns:1fr}
+ .track-grid,.checkpoints{grid-template-columns:1fr}
+ .flow-step{flex:1 1 145px}
+}
